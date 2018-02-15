@@ -18,8 +18,8 @@ switch(mesDelAño)
                 break;
 
     case "Diciembre":
-                    alert("¡Felices fiestas!");
-                    break;
+                alert("¡Felices fiestas!");
+                break;
 
 }
 
