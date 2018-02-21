@@ -1,14 +1,36 @@
 function Mostrar()
 {
+	var numero;
+	var positivo = 0;
+	var negativo = 1;
+	var respuesta = "si";
+	var flag = 0;
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+	do
+	{
+		numero = parseInt(prompt("Ingrese un numero"));
+			if(numero >= 0)
+			{
+				positivo = positivo + numero;
+			}
 
+			else
+			{
+				negativo = negativo * numero;
+				flag = 1;
+			}
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+		respuesta = prompt("¿Desea ingresar otro numero?");
+	}
+	while(respuesta == "si")
+
+document.getElementById("suma").value=positivo;
+
+	if(flag == 0)
+	{
+		negativo = 0;
+	}
+
+document.getElementById("producto").value=negativo;
 
 }//FIN DE LA FUNCIÓN
