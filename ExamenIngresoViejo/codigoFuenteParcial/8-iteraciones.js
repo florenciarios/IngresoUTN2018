@@ -15,6 +15,11 @@ function Mostrar()
     {
         num=parseFloat(prompt("Ingrese un número"));
 
+        while(num < 0)
+        {
+            num=parseFloat(prompt("Error. Reingrese el número"));
+        }
+
         acumulador=acumulador+num;
 
         if(num%2==0)
@@ -40,7 +45,7 @@ function Mostrar()
     promedio= acumulador/contIng;
 
     document.write("La cantidad de números pares ingresados es " + contPares + "</br>");
-    document.write("El promedio de los números ingresados es " + promedio + "</br>");
+    document.write("El promedio de los números ingresados es " + promedio.toFixed(1) + "</br>");
     document.write("La suma de los números es " + acumulador + "</br>");
     document.write("El número máximo es " + max + " y el mínimo es " + min);
 }
