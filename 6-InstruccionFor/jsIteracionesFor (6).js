@@ -1,27 +1,21 @@
 function Mostrar()
 {
+    var num;
+    var contPares=0;
+    var i;
 
+    num=parseInt(prompt("Ingrese un número"));
 
-for(;;)
-{
-    var num = prompt("Ingrese un numero");
-    var numPar = 0;
-    var pregunta
-
-    if(num %2 == 0)
+    for(i=1;i<=num;i++)
     {
-        numPar++;
+        if(i%2==0)
+        {
+            contPares++;
+            console.log(i);
+        }
+
     }
 
-    pregunta = prompt("Quiere ingresar otro?")
-    if(pregunta == "no")
-    {
-        break;
-    }
-
-    
-}
-
-alert("La cantidad de números pares encontrados son " + numPar + " y los números son " + num);
+    console.log("La cantidad de números pares encontrados es " + contPares);
 
 }//FIN DE LA FUNCIÓN
