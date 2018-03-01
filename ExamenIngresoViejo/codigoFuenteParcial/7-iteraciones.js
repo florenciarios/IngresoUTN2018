@@ -7,13 +7,17 @@ function Mostrar()
     var acumulador = 0;
     var notaBaja;
     var promedio;
-    var cantPreg = 0;
     var flag = 0;
 
-    do
-    {
+   for(var i=1;i<7;i++)
+   {
         nota = parseInt(prompt("Ingrese la nota"));
         sexo = prompt("Ingrese el sexo");
+
+        while(nota <0 && nota >10)
+        {
+            nota = parseInt(prompt("Error. Reingrese la nota"));
+        }
 
         acumulador = acumulador + nota;
 
@@ -27,16 +31,11 @@ function Mostrar()
             notaBaja=nota;
             flag = 1;
         }
-
-        cantPreg++;
+   }
     
-    }
-    while(nota >= 0 && nota <= 10 && cantPreg < 6)
-
     promedio=acumulador/6;
 
-    alert("El promedio de las notas es " + promedio.toFixed(1) + ", la nota más baja fue " + notaBaja + " y los varones aprobados son " + contH);
-
+    alert("El promedio de las notas es " + promedio.toFixed(1) + ", la nota más baja fue " + notaBaja + " y los varones aprobados son " + contH);  
 
 }
 

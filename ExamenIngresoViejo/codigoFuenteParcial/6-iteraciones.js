@@ -1,15 +1,21 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
 function Mostrar()
 {
-    var flag = 0;
     var importe;
     var max;
     var min;
-    var cantidad=0;
-
-    do
+    var flag = 0;
+        
+    for(var i=0;i<7;i++ )
     {
+
         importe=parseInt(prompt("Ingrese importe del día"));
+
+        while(importe <= 0)
+        {
+            importe=parseInt(prompt("Error. Ingrese un numero positivo"));
+        }
+
         if(importe>max || flag == 0)
         {
             max=importe;
@@ -19,10 +25,11 @@ function Mostrar()
             min=importe;
             flag=1;
         }
-        cantidad++;
     }
-    while(cantidad<7 && importe!= 0)
 
-    alert("El mayor importe fue " + max + " y el menor importe fue " + min);
+    alert("El menor importe fue " + min + " y el mayor importe fue " + max);
+    
+
+
 }
 
